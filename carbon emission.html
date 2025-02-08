@@ -1,0 +1,475 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   AI-Driven Smart Carbon Footprint Tracker
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="font-roboto bg-gray-100">
+  <header class="bg-green-600 text-white p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-2xl font-bold">
+     Smart Carbon Footprint Tracker
+    </h1>
+    <nav>
+     <ul class="flex space-x-4">
+      <li>
+       <a class="hover:underline" href="#">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Input
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Results
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Leaderboard
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <main class="container mx-auto p-4">
+   <!-- Home Page -->
+   <section class="my-8" id="home">
+    <h2 class="text-3xl font-bold mb-4">
+     Overview of Carbon Footprint
+    </h2>
+    <div class="bg-white p-6 rounded-lg shadow-md">
+     <div class="flex justify-between items-center">
+      <div>
+       <h3 class="text-xl font-semibold">
+        Your Carbon Footprint
+       </h3>
+       <p class="text-gray-600">
+        Track your daily, weekly, and monthly CO₂ emissions.
+       </p>
+      </div>
+      <img alt="Illustration of a carbon footprint with various icons representing different activities" class="w-24 h-24" height="100" src="https://storage.googleapis.com/a1aa/image/a9mRZmmKqS093lcXCljKSo4v_LsffN_fxznlSYMo_mc.jpg" width="100"/>
+     </div>
+     <div class="mt-4">
+      <div class="flex justify-between items-center">
+       <span class="text-lg font-semibold">
+        Daily
+       </span>
+       <span class="text-lg font-semibold">
+        5.2 kg CO₂
+       </span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+       <div class="bg-green-600 h-2.5 rounded-full" style="width: 52%">
+       </div>
+      </div>
+      <div class="flex justify-between items-center">
+       <span class="text-lg font-semibold">
+        Weekly
+       </span>
+       <span class="text-lg font-semibold">
+        36.4 kg CO₂
+       </span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+       <div class="bg-green-600 h-2.5 rounded-full" style="width: 36%">
+       </div>
+      </div>
+      <div class="flex justify-between items-center">
+       <span class="text-lg font-semibold">
+        Monthly
+       </span>
+       <span class="text-lg font-semibold">
+        156 kg CO₂
+       </span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2.5">
+       <div class="bg-green-600 h-2.5 rounded-full" style="width: 15%">
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Average Carbon Emission Statistics -->
+   <section class="my-8" id="statistics">
+    <h2 class="text-3xl font-bold mb-4">
+     Average Carbon Emission Statistics for
+     <span id="current-year">
+      2023
+     </span>
+    </h2>
+    <div class="bg-white p-6 rounded-lg shadow-md">
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-green-100 p-4 rounded-lg text-center">
+       <h3 class="text-xl font-semibold">
+        Transport
+       </h3>
+       <p class="text-2xl font-bold">
+        2.5 kg CO₂
+       </p>
+       <img alt="Icon representing transport emissions" class="w-16 h-16 mx-auto" height="64" src="https://storage.googleapis.com/a1aa/image/G53suo4OaaBTIM-H_JbNbp2XX1qmiHwj5Mo2u7bks3w.jpg" width="64"/>
+      </div>
+      <div class="bg-green-100 p-4 rounded-lg text-center">
+       <h3 class="text-xl font-semibold">
+        Electricity
+       </h3>
+       <p class="text-2xl font-bold">
+        1.7 kg CO₂
+       </p>
+       <img alt="Icon representing electricity emissions" class="w-16 h-16 mx-auto" height="64" src="https://storage.googleapis.com/a1aa/image/EOaZjOeX_XX5rr8G4RzZvD5KJNNC_8Y_xG-E-QO5Nzg.jpg" width="64"/>
+      </div>
+      <div class="bg-green-100 p-4 rounded-lg text-center">
+       <h3 class="text-xl font-semibold">
+        Diet
+       </h3>
+       <p class="text-2xl font-bold">
+        1.0 kg CO₂
+       </p>
+       <img alt="Icon representing diet emissions" class="w-16 h-16 mx-auto" height="64" src="https://storage.googleapis.com/a1aa/image/SOT2tEb2tP-ciSky0HgeTun-APoOBU5Nk_Z4d-hZnTk.jpg" width="64"/>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Input Page -->
+   <section class="my-8" id="input">
+    <h2 class="text-3xl font-bold mb-4">
+     Input Your Daily Activities
+    </h2>
+    <div class="bg-white p-6 rounded-lg shadow-md">
+     <form>
+      <div class="mb-4">
+       <label class="block text-gray-700 font-bold mb-2" for="date">
+        Date
+       </label>
+       <input class="w-full p-2 border border-gray-300 rounded-lg" id="date" type="date"/>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 font-bold mb-2" for="age">
+        Age
+       </label>
+       <input class="w-full p-2 border border-gray-300 rounded-lg" id="age" type="number"/>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 font-bold mb-2" for="location">
+        Location
+       </label>
+       <input class="w-full p-2 border border-gray-300 rounded-lg" id="location" type="text"/>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 font-bold mb-2" for="country">
+        Country
+       </label>
+       <input class="w-full p-2 border border-gray-300 rounded-lg" id="country" type="text"/>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 font-bold mb-2" for="transport">
+        Transport
+       </label>
+       <select class="w-full p-2 border border-gray-300 rounded-lg" id="transport">
+        <option>
+         Car
+        </option>
+        <option>
+         Bike
+        </option>
+        <option>
+         Public Transport
+        </option>
+        <option>
+         Walking
+        </option>
+       </select>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 font-bold mb-2" for="food">
+        Food Consumption
+       </label>
+       <select class="w-full p-2 border border-gray-300 rounded-lg" id="food">
+        <option>
+         Vegetarian
+        </option>
+        <option>
+         Non-Vegetarian
+        </option>
+        <option>
+         Fast Food
+        </option>
+        <option>
+         Organic
+        </option>
+       </select>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 font-bold mb-2" for="shopping">
+        Shopping Habits
+       </label>
+       <select class="w-full p-2 border border-gray-300 rounded-lg" id="shopping">
+        <option>
+         Eco-friendly
+        </option>
+        <option>
+         Brand Preferences
+        </option>
+       </select>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 font-bold mb-2" for="electricity">
+        Electricity Usage (kWh)
+       </label>
+       <input class="w-full p-2 border border-gray-300 rounded-lg" id="electricity" type="number"/>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 font-bold mb-2" for="solar">
+        Solar Panels
+       </label>
+       <select class="w-full p-2 border border-gray-300 rounded-lg" id="solar">
+        <option>
+         Yes
+        </option>
+        <option>
+         No
+        </option>
+       </select>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 font-bold mb-2" for="energy-efficient">
+        Energy-efficient Devices
+       </label>
+       <select class="w-full p-2 border border-gray-300 rounded-lg" id="energy-efficient">
+        <option>
+         Yes
+        </option>
+        <option>
+         No
+        </option>
+       </select>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 font-bold mb-2" for="waste">
+        Waste Disposal Methods
+       </label>
+       <select class="w-full p-2 border border-gray-300 rounded-lg" id="waste">
+        <option>
+         Recycling
+        </option>
+        <option>
+         Composting
+        </option>
+        <option>
+         Landfill
+        </option>
+       </select>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700 font-bold mb-2" for="activities">
+        Daily Activities
+       </label>
+       <select class="w-full p-2 border border-gray-300 rounded-lg" id="activities">
+        <option>
+         Gym
+        </option>
+        <option>
+         Work-from-home
+        </option>
+        <option>
+         Outdoor activities
+        </option>
+       </select>
+      </div>
+      <button class="bg-green-600 text-white p-2 rounded-lg" type="submit">
+       Calculate Footprint
+      </button>
+     </form>
+    </div>
+   </section>
+   <!-- Results Page -->
+   <section class="my-8" id="results">
+    <h2 class="text-3xl font-bold mb-4">
+     Your Carbon Footprint Results
+    </h2>
+    <div class="bg-white p-6 rounded-lg shadow-md">
+     <div class="flex justify-between items-center">
+      <div>
+       <h3 class="text-xl font-semibold">
+        Estimated CO₂ Emissions
+       </h3>
+       <p class="text-gray-600">
+        Based on your daily activities.
+       </p>
+      </div>
+      <img alt="Illustration of a bar chart showing CO₂ emissions breakdown" class="w-24 h-24" height="100" src="https://storage.googleapis.com/a1aa/image/DEpSnbM1K17W46193L0pCM3mhP27Q1PxbppcrRCk7fY.jpg" width="100"/>
+     </div>
+     <div class="mt-4">
+      <div class="flex justify-between items-center">
+       <span class="text-lg font-semibold">
+        Transport
+       </span>
+       <span class="text-lg font-semibold">
+        2.5 kg CO₂
+       </span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+       <div class="bg-green-600 h-2.5 rounded-full" style="width: 25%">
+       </div>
+      </div>
+      <div class="flex justify-between items-center">
+       <span class="text-lg font-semibold">
+        Electricity
+       </span>
+       <span class="text-lg font-semibold">
+        1.7 kg CO₂
+       </span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+       <div class="bg-green-600 h-2.5 rounded-full" style="width: 17%">
+       </div>
+      </div>
+      <div class="flex justify-between items-center">
+       <span class="text-lg font-semibold">
+        Diet
+       </span>
+       <span class="text-lg font-semibold">
+        1.0 kg CO₂
+       </span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2.5">
+       <div class="bg-green-600 h-2.5 rounded-full" style="width: 10%">
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Leaderboard Page -->
+   <section class="my-8" id="leaderboard">
+    <h2 class="text-3xl font-bold mb-4">
+     Leaderboard
+    </h2>
+    <div class="bg-white p-6 rounded-lg shadow-md">
+     <table class="w-full text-left">
+      <thead>
+       <tr>
+        <th class="border-b-2 p-2">
+         Rank
+        </th>
+        <th class="border-b-2 p-2">
+         User
+        </th>
+        <th class="border-b-2 p-2">
+         CO₂ Reduction
+        </th>
+        <th class="border-b-2 p-2">
+         Points
+        </th>
+        <th class="border-b-2 p-2">
+         Progress
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td class="border-b p-2">
+         1
+        </td>
+        <td class="border-b p-2">
+         Alice
+        </td>
+        <td class="border-b p-2">
+         50 kg
+        </td>
+        <td class="border-b p-2">
+         500
+        </td>
+        <td class="border-b p-2">
+         <div class="relative pt-1">
+          <div class="flex mb-2 items-center justify-between">
+           <div>
+            <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-600 bg-green-200">
+             Excellent
+            </span>
+           </div>
+           <div class="text-right">
+            <span class="text-xs font-semibold inline-block text-green-600">
+             100%
+            </span>
+           </div>
+          </div>
+          <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-green-200">
+           <div class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-600" style="width: 100%">
+           </div>
+          </div>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="border-b p-2">
+         2
+        </td>
+        <td class="border-b p-2">
+         Bob
+        </td>
+        <td class="border-b p-2">
+         45 kg
+        </td>
+        <td class="border-b p-2">
+         450
+        </td>
+        <td class="border-b p-2">
+         <div class="relative pt-1">
+          <div class="flex mb-2 items-center justify-between">
+           <div>
+            <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200">
+             Great
+            </span>
+           </div>
+           <div class="text-right">
+            <span class="text-xs font-semibold inline-block text-blue-600">
+             90%
+            </span>
+           </div>
+          </div>
+          <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-blue-200">
+           <div class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-600" style="width: 90%">
+           </div>
+          </div>
+         </div>
+        </td>
+       </tr>
+       <tr>
+        <td class="border-b p-2">
+         3
+        </td>
+        <td class="border-b p-2">
+         Charlie
+        </td>
+        <td class="border-b p-2">
+         40 kg
+        </td>
+        <td class="border-b p-2">
+         400
+        </td>
+        <td class="border-b p-2">
+         <div class="relative pt-1">
+          <div class="flex mb-2 items-center justify-between">
+           <div>
+            <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-yellow-600 bg-yellow-200">
+             Good
+            </span>
+           </div>
+           <div class="text-right">
+            <span class="text-xs font-semibold inline-block text-yellow-600">
+             80%
+            </span>
+           </div>
+          </div>
+          <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-yellow-200">
+           <div class="shadow-none flex flex-col text-center whitespace-nowrap
